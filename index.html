@@ -99,13 +99,13 @@
     var response = parseInt(document.getElementById("response").value);
     var training = parseInt(document.getElementById("training").value);
 
-    var total = (lighting + visibility + response + training) / 4;
-    
+    var total = (lighting * 0 + visibility * 0.33 + response * 0.66 + training * 0.9) / 4;
+
     document.getElementById("lightingResult").textContent = "Lighting: " + lighting + "%";
     document.getElementById("visibilityResult").textContent = "Visibility: " + visibility + "%";
     document.getElementById("responseResult").textContent = "Response: " + response + "%";
     document.getElementById("trainingResult").textContent = "Training Programs: " + training + "%";
-    document.getElementById("totalGrade").textContent = "Total Grade: " + total + "%";
+    document.getElementById("totalGrade").textContent = "Total Grade: " + total.toFixed(2) + "%";
 
     document.getElementById("results").style.display = "block";
     document.getElementById("offer").style.display = "block";
@@ -119,8 +119,6 @@
       alert("Thank you for considering the special offer.");
     }
   }
-</script>
-
 </script>
 
 </body>
