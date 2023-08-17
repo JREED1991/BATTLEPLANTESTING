@@ -93,7 +93,35 @@
 </div>
 
 <script>
-// Your JavaScript code here...
+<script>
+  function generateResults() {
+    var lighting = parseInt(document.getElementById("lighting").value);
+    var visibility = parseInt(document.getElementById("visibility").value);
+    var response = parseInt(document.getElementById("response").value);
+    var training = parseInt(document.getElementById("training").value);
+
+    var total = (lighting + visibility + response + training) / 4;
+    
+    document.getElementById("lightingResult").textContent = "Lighting: " + lighting + "%";
+    document.getElementById("visibilityResult").textContent = "Visibility: " + visibility + "%";
+    document.getElementById("responseResult").textContent = "Response: " + response + "%";
+    document.getElementById("trainingResult").textContent = "Training Programs: " + training + "%";
+    document.getElementById("totalGrade").textContent = "Total Grade: " + total + "%";
+
+    document.getElementById("results").style.display = "block";
+    document.getElementById("offer").style.display = "block";
+  }
+
+  function purchaseOffer() {
+    var confirmation = confirm("Would you like to proceed with the special offer?");
+    if (confirmation) {
+      alert("Congratulations! You've chosen to proceed with the special offer.");
+    } else {
+      alert("Thank you for considering the special offer.");
+    }
+  }
+</script>
+
 </script>
 
 </body>
